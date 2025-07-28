@@ -70,7 +70,7 @@ const NetworkMenuPopup = ({ items, tabs }: Props) => {
   );
 
   return (
-    <PopoverContent w="382px">
+    <PopoverContent w="300px">
       <PopoverBody>
         { content }
       </PopoverBody>
