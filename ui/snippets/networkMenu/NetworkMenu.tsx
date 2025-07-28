@@ -13,12 +13,12 @@ const NetworkMenu = ({ isCollapsed }: Props) => {
   const menu = useNetworkMenu();
 
   return (
-    <Popover openDelay={ 300 } placement="right-start" gutter={ 8 } isLazy isOpen={ menu.isOpen } onClose={ menu.onClose }>
+    <Popover openDelay={ 300 } placement="left-start" gutter={ 8 } isLazy isOpen={ menu.isOpen } onClose={ menu.onClose }>
       <PopoverTrigger>
         <NetworkMenuButton
           marginLeft="auto"
           overflow="hidden"
-          width={{ base: 'auto', lg: isCollapsed === false ? 'auto' : '0px', xl: isCollapsed ? '0px' : 'auto' }}
+          width={{ base: 'auto' }}
           isActive={ menu.isOpen }
           onClick={ menu.onToggle }
         />

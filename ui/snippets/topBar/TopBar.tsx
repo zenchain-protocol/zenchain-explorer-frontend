@@ -3,6 +3,7 @@ import React from 'react';
 
 import config from 'configs/app';
 
+import NetworkMenu from '../networkMenu/NetworkMenu';
 import Settings from './settings/Settings';
 import SwapButton from './SwapButton';
 import TopBarStats from './TopBarStats';
@@ -28,7 +29,16 @@ const TopBar = () => {
             <Divider mr={ 3 } ml={{ base: 2, sm: 3 }} height={ 4 } orientation="vertical"/>
           </>
         ) }
+
         <Settings/>
+
+        { Boolean(config.UI.sidebar.featuredNetworks) && (
+          <>
+            <Divider mr={ 3 } ml={{ base: 2, sm: 3 }} height={ 4 } orientation="vertical"/>
+
+            <NetworkMenu/>
+          </>
+        ) }
       </Flex>
     </Flex>
   );
